@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>{{book.title}}</h1>
+    <span>Written by: 
+    {{#each book.author}}
+        {{this.name}} {{this.lastName}} ( {{this.nationality}} )
+    {{/each}}
+    </span>
+    <p>Summary: {{book.description}}</p>
+    <p>Rating: {{book.rating}}/10</p>
+    <a href="/books">Return</a>
+</div>

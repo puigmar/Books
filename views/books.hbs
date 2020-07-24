@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Book List</h1>
+    <div class="books-list">
+        <ul>
+            {{#each books}}
+            <li class="book">
+                <a class="book_link" href="/book/{{_id}}">
+                    <h3>{{title}}</h3>
+                    <p>by {{author.[0].name}} {{author.[0].lastName}}</p>
+                </a>
+                <a href="/book/edit?bookId={{_id}}" class="btn">Edit</a>
+            </li>
+            {{/each}}
+        </ul>
+        
+    </div>
+</div>

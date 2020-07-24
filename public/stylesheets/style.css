@@ -1,0 +1,147 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  font-size: 62.5%;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.books-list{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.books-list ul{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  padding: 0;
+  list-style: none;
+}
+
+.books-list ul li.book{
+  padding: 15px;
+  margin: 0 15px 20px;
+  border: 1px solid #ccc;
+  width: calc(33.33% - 30px);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.books-list ul li.book .book_link{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.books-list ul li.book .book_link h3{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.books-list ul li.book .book_link h3 + p{
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.books-list ul li.book .book_link:hover h3{
+  color: #00B7FF
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px;
+  background-color: #00B7FF;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 5px;
+  text-decoration: none;
+  min-width: 150px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 0;
+  height: 40px
+}
+
+.books-list ul li.book .book_btn:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+form .form-group{
+  margin-bottom: 25px;
+}
+
+form .form-group label,
+form .form-group input{
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form .btn{
+  width: 100%;
+  margin-top: 5px;
+}
+
+form .form-group input{
+  margin-bottom: 0;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  padding: 0 15px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+@media (max-width: 768px){
+  .books-list ul{
+    margin: 0 -15px;
+  }
+  .books-list ul li.book{
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 700px){
+  body{
+    padding: 15px;
+  }
+
+  .books-list ul{
+    margin: 0;
+  }
+
+  .books-list ul li.book{
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
