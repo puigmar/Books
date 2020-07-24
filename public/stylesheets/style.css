@@ -87,12 +87,22 @@ a {
   color: #fff;
 }
 
+.reviews{
+  margin-top: 50px;
+}
+
+hr{
+  height: 1px;
+  margin: 50px 0;
+}
+
 form .form-group{
   margin-bottom: 25px;
 }
 
 form .form-group label,
-form .form-group input{
+form .form-group input,
+form .form-group textarea{
   width: 100%;
   display: block;
   margin-bottom: 10px;
@@ -103,7 +113,8 @@ form .btn{
   margin-top: 5px;
 }
 
-form .form-group input{
+form .form-group input,
+form .form-group textarea{
   margin-bottom: 0;
   height: 40px;
   border-radius: 3px;
@@ -113,6 +124,33 @@ form .form-group input{
   font-size: 1.6rem;
   color: #333;
 }
+
+form .form-group textarea{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: auto;
+}
+
+.review-item {
+  padding: 15px;
+  background-color: rgb(128, 128, 128, 0.1);
+  border-radius: 3px;
+  margin: 0 0 20px;
+}
+
+  .review-item_title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    color: #333
+  }
+
+  .review-item_description {
+    font-size: 1.5rem;
+    color: grey;
+    margin: 0 0 5px;
+    font-style: italic;
+  }
 
 @media (max-width: 768px){
   .books-list ul{

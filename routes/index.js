@@ -99,4 +99,20 @@ router.post('/authors/add', (req, res, next) => {
   })
 });
 
+// Add reviews
+
+router.post('/book/:book_id', (req, res, next) => {
+  const { user, comments, book_id } = req.body;
+  Book.update(
+    { _id: book_id },
+    { $push: { reviews: { user, comments } } }
+  )
+    .then(book => {
+      res.redirect('/book/' + book_id);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
 module.exports = router;

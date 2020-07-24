@@ -8,4 +8,31 @@
     <p>Summary: {{book.description}}</p>
     <p>Rating: {{book.rating}}/10</p>
     <a href="/books">Return</a>
+
+    {{#if book.reviews}}
+        <section class="reviews">
+            <h2>Reviews</h2>
+            {{#each book.reviews}}
+                <div class="review-item">
+                    <p class="review-item_description">"{{this.comments}}"</p>
+                    <p class="review-item_title">{{this.user}}</p>
+                </div>
+            {{/each}}
+        </section>
+    {{/if}}
+
+    <hr>
+    <h2>Add a review</h2>
+    <form action="/book/{{book._id}}" method="post">
+       <input type="hidden" name="book_id" value="{{book._id}}">
+        <div class="form-group">
+            <label for="">User:</label>
+            <input type="text" name="user">
+        </div>
+        <div class="form-group">
+            <label for="">Comments:</label>
+            <textarea type="text" name="comments"></textarea>
+        </div>
+        <button type="submit" class="btn">ADD</button>
+    </form>
 </div>
